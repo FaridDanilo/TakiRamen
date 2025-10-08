@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /** Colores base */
+    --color-fondo-principal: #0A0F1C;
+    --color-fondo-secundario: #1C2230;
+
+    /** Colores de acento */
+    --color-acento-rojo: #D72638;
+    --color-acento-dorado: #F0A500;
+
+    /** Colores de texto */
+    --color-texto-principal: #F5F5F5;
+    --color-texto-secundario: #B5B5B5;
+    --color-texto-dorado: #CBB26A;
+
+    /** Sombras y efectos */
+    --sombra-suave: 0 4px 10px rgba(0, 0, 0, 0.4);
+    --sombra-dorada: 0 0 12px rgba(240, 165, 0, 0.4);
+    --sombra-roja: 0 0 12px rgba(215, 38, 56, 0.4);
+
+    --color-borde: #2A2F3A;
+    --color-hover: #FF004C;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+nav ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    justify-content: space-around;
+    background-color: var(--color-fondo-principal);
+}
+
+nav a {
+    color: var(--color-texto-principal);
+    text-decoration: none;
+}
+
+main {
+    height: 100vh;
+    background: url(../assets/img/backgroundmain.jpg) no-repeat center center/cover;
+}
+
+.container-slogan {
+    position: relative;
+    top: 50px; left: 50px;
+    width: 550px;
+    font-size: 1.5rem;
+    /* background-color: red; */
+}
+
+.slogan {
+    color: var(--color-texto-principal);
+}
+
+.section.menu {
+    padding: 20px;
+    background-color: var(--color-fondo-principal);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card-content {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    transition: all 0.2s ease-in;
+}
+
+.card-content h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-transform: uppercase;
+    translate: -50% -50%;
+    font-size: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    color: var(--color-texto-principal);
+    border-bottom: 3px solid var(--color-fondo-principal);
+}
+
+.card-content img:hover {
+    filter: brightness(.5);
+}
+
+.card-content img {
+    object-fit: cover;
+}
+
+@keyframes appear {
+    from {opacity: 0; scale: 0.5;}
+    to {opacity: 1; scale: 1;}
+}
+
+@keyframes translate {
+    from {opacity: 0; transform: translateX(-50px);}
+}
