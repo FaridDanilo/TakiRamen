@@ -33,29 +33,57 @@ body {
     font-family: "Noto Sans JP", sans-serif;
 }
 
-nav ul {
+/** ----------------- Navbar Start ------------------  */
+
+nav {
+    position: fixed;
     display: flex;
     width: 100%;
-    align-items: center;
-    list-style: none;
-    justify-content: space-around;
+    flex-direction: row;
+    padding: 8px;
+    z-index: 1;
+    justify-content: space-between;
     background-color: var(--color-fondo-principal);
 }
 
-nav a {
-    color: var(--color-texto-principal);
-    text-decoration: none;
+nav ul {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
 }
 
+nav a {
+    text-decoration: none;
+    padding: 8px 0;
+    color: var(--color-texto-principal);
+}
+
+nav a.active {
+    border-bottom: 2px solid var(--color-acento-rojo);
+}
+
+/** ----------------- Navbar End ------------------  */
+
 main {
-    height: 100vh;
-    background: url(../assets/img/backgroundmain.jpg) no-repeat center center/cover;
+    background-color: var(--color-fondo-principal);
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(.5);
+    /* filter: brightness(.5); */
+    /* background: url(../assets/img/backgroundmain.jpg) no-repeat center center/cover; */
 }
 
 .container-slogan {
-    position: relative;
-    top: 50px; left: 50px;
-    width: 550px;
+    position: absolute;
+    top: 12rem; left: 4.5rem;
+    /* margin: 60px; */
+    width: 750px;
     font-size: 1.5rem;
     /* background-color: red; */
 }
@@ -65,7 +93,6 @@ main {
 }
 
 .section.menu {
-    padding: 20px;
     background-color: var(--color-fondo-principal);
 }
 
@@ -83,9 +110,14 @@ main {
     cursor: pointer;
     animation: appear linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-    transition: all 0.2s ease-in;
+    animation-range: entry 0%;
+    transition: all 0.3s ease;
 }
+
+.card-content:nth-child(-n+6) {
+    margin-top: 5px;
+}
+
 
 .card-content h1 {
     position: absolute;
@@ -93,8 +125,11 @@ main {
     left: 50%;
     text-transform: uppercase;
     translate: -50% -50%;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     opacity: 0;
+    width: 100%;
+    background-color: var(--color-acento-rojo);
+    text-align: center;
     pointer-events: none;
     color: var(--color-texto-principal);
     border-bottom: 3px solid var(--color-fondo-principal);
