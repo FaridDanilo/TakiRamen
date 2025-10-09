@@ -10,103 +10,179 @@
 </head>
 
 <body>
-    <nav>
-        <img src="assets/img/logo.png" style="width: 70px;" alt="LOGO">
-        <ul>
-            <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
-            <li><a href="#menu"><i class="fa-solid fa-utensils"></i> Menu</a></li>
-            <li><a href="#direction"><i class="fa-solid fa-location-crosshairs"></i> Direction</a></li>
-            <li><a href="#theBest"><i class="fa-solid fa-crown"></i> The best</a></li>
-            <li><a href="#contact"><i class="fa-solid fa-phone"></i> Contact</a></li>
-        </ul>
-    </nav>
-
-    <main id="home">
-        <img src="assets/img/backgroundmain.jpg" alt="">
-        <div class="container-slogan">
-            <p class="slogan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, vero saepe unde
-                doloremque
-                praesentium, earum illo soluta natus sint quibusdam nesciunt reprehenderit sed facilis in. Vel dolorum
-                pariatur earum quis.</p>
-                <button type="button">See More</button>
+    <!--* Navbar Start -->
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="assets/img/logo.png" alt="Takiramen Logo">
+            <h1>Takiramen<span class="dot">.</span></h1>
         </div>
-    </main>
 
-    <section class="section menu">
+        <nav class="navbar__links">
+            <ul>
+                <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#menu"><i class="fa-solid fa-utensils"></i> Menu</a></li>
+                <li><a href="#direction"><i class="fa-solid fa-location-crosshairs"></i> Direction</a></li>
+                <li><a href="#theBest"><i class="fa-solid fa-crown"></i> The best</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-phone"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--* Navbar End -->
+
+    <!--* Front Page Start -->
+    <section class="hero" id="home">
+        <div class="hero__overlay">
+
+            <div class="hero__sun"></div>
+
+            <div class="steam"></div>
+            <div class="steam steam--2"></div>
+            <div class="steam steam--3"></div>
+
+            <div class="hero__content fade-in-up">
+                <h2>The art of Japanese ramen</h2>
+                <p>Flavors that tell stories. Tradition, passion, and the Takiramen touch.</p>
+                <button class="btn-primary">See Menú</button>
+                <button class="btn-secondary">Our History</button>
+            </div>
+        </div>
+    </section>
+    <!--* Front Page End -->
+
+    <!--* Section Menú Start -->
+    <section class="menu section" id="menu">
+        <div class="menu__header">
+            <h2>Discover Our Ramen</h2>
+            <p>Explore different styles of traditional and modern ramen, prepared with authentic Japanese ingredients.
+            </p>
+        </div>
+
         <div class="card-container">
             <div class="card-content">
                 <img src="assets/img/ramens/misoramen.jpg" style="width: 300px;" alt="miso ramen">
-                <h1>miso ramen</h1>
+                <h3>miso ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/shoyuramen.jpg" style="width: 300px;" alt="shoyu ramen">
-                <h1>shoyu ramen</h1>
+                <h3>shoyu ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/shioramen.jpg" style="width: 300px;" alt="shio ramen">
-                <h1>shio ramen</h1>
+                <h3>shio ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/shoyuramen.jpg" style="width: 300px;" alt="shoyuramen ramen">
-                <h1>shoyu ramen</h1>
+                <h3>shoyu ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/tonkotsu.jpg" style="width: 300px;" alt="tonkotsu ramen">
-                <h1>tonkotsu ramen</h1>
+                <h3>tonkotsu ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/tantanmen.jpg" style="width: 300px;" alt="tantanmen ramen">
-                <h1>tantanmen ramen</h1>
+                <h3>tantanmen ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/taiwan.jpg" style="width: 300px;" alt="taiwan ramen">
-                <h1>taiwan ramen</h1>
+                <h3>taiwan ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/shio.jpg" style="width: 300px;" alt="shio ramen">
-                <h1>shio ramen</h1>
+                <h3>shio ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/sapporo.jpg" style="width: 300px;" alt="sapporo ramen">
-                <h1>sapporo ramen</h1>
+                <h3>sapporo ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/okinawa.jpg" style="width: 300px;" alt="okinawa ramen">
-                <h1>okinawa ramen</h1>
+                <h3>okinawa ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/menma.jpg" style="width: 300px;" alt="menma ramen">
-                <h1>menma ramen</h1>
+                <h3>menma ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/kurume.jpg" style="width: 300px;" alt="kurume ramen">
-                <h1>kurume ramen</h1>
+                <h3>kurume ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/kitakata.jpg" style="width: 300px;" alt="kitakata ramen">
-                <h1>kitakata ramen</h1>
+                <h3>kitakata ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/kagoshima.jpg" style="width: 300px;" alt="kagoshima ramen">
-                <h1>kagoshima ramen</h1>
+                <h3>kagoshima ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/hakataramen.jpg" style="width: 300px;" alt="hakataramen ramen">
-                <h1>hakataramen ramen</h1>
+                <h3>hakataramen ramen</h3>
             </div>
             <div class="card-content">
                 <img src="assets/img/ramens/champon.jpg" style="width: 300px;" alt="champon ramen">
-                <h1>champon ramen</h1>
+                <h3>champon ramen</h3>
             </div>
         </div>
     </section>
+    <!--* Section Menú End -->
 
-    <section class="section direction">
+    <!--* Section Menú Start -->
+    <section class="direction section" id="direction">
+        <div class="direction__container">
 
+            <div class="direction__map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.766937853033!2d-74.07209212594783!3d4.641523142182154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a441f05c2b%3A0xaabc3d15e4d0b087!2sBogot%C3%A1%2C%20Colombia!5e0!3m2!1ses!2sco!4v1691345210869!5m2!1ses!2sco"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"> </iframe>
+            </div>
+
+            <div class="direction__info">
+                <h2>Find Us</h2>
+                <p>We're located in the heart of the city, where Japanese tradition and the authentic taste of ramen
+                    meet.</p>
+
+                <div class="direction__details">
+                    <p><i class="fa-solid fa-location-dot"></i> Calle 45 #10-23, Bogotá, Colombia</p>
+                    <p><i class="fa-solid fa-clock"></i> Lunes a Domingo: 11:00 AM - 10:00 PM</p>
+                    <p><i class="fa-solid fa-phone"></i> +57 300 123 4567</p>
+                </div>
+
+                <button class="btn-primary">How to Arrive</button>
+            </div>
+
+        </div>
     </section>
+    <!--* Section Menú End -->
 
-    <section class="section theBest">
+    <section class="theBest section" id="theBest">
+        <div class="theBest__header">
+            <h2>Los Más Populares</h2>
+            <p>Los ramen más aclamados por nuestros clientes, con sabores que conquistan desde el primer sorbo.</p>
+        </div>
 
+        <div class="carousel">
+            <div class="carousel__track">
+                <div class="carousel__item">
+                    <img src="assets/img/ramens/tonkotsu.jpg" alt="Tonkotsu Ramen">
+                    <h3>Tonkotsu Ramen</h3>
+                </div>
+                <div class="carousel__item">
+                    <img src="assets/img/ramens/misoramen.jpg" alt="Miso Ramen">
+                    <h3>Miso Ramen</h3>
+                </div>
+                <div class="carousel__item">
+                    <img src="assets/img/ramens/shoyuramen.jpg" alt="Shoyu Ramen">
+                    <h3>Shoyu Ramen</h3>
+                </div>
+                <div class="carousel__item">
+                    <img src="assets/img/ramens/tantanmen.jpg" alt="Tantanmen Ramen">
+                    <h3>Tantanmen Ramen</h3>
+                </div>
+            </div>
+
+            <button class="carousel__btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="carousel__btn next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
     </section>
 
     <section class="section contact">
@@ -114,8 +190,8 @@
     </section>
 
     <footer>
-        <div class="social-red">
-            <div class="social-nets">
+        <div class="container-social-red">
+            <div class="content-social-nets">
                 <i class="fa-brands fa-facebook-f social"></i>
                 <i class="fa-brands fa-instagram social"></i>
                 <i class="fa-brands fa-tiktok social"></i>
@@ -123,7 +199,7 @@
             </div>
         </div>
         <p>2025 &copy; Takiramen Todos los derechos reservados.</p>
-        <p><a href="/privacidad">Política de Privacidad</a> | <a href="/terminos">Términos y Condiciones</a></p>
+        <!-- <p><a href="/privacidad">Política de Privacidad</a> | <a href="/terminos">Términos y Condiciones</a></p> -->
     </footer>
 
     <script src="assets/scripts.js"></script>
