@@ -224,6 +224,10 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
+.card-content:active {
+    transform: scale(.9);
+}
+
 .card-content img {
     width: 100%;
     height: 100%;
@@ -237,15 +241,13 @@ body {
 }
 
 .card-content h3 {
+    opacity: 0;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 45%; bottom: 0; left: 0;
     width: 100%;
-    background: var(--color-acento-rojo);
-    padding: 0.8rem;
     color: white;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 1px;
 }
 /** ============ Menú Section End ============ */
@@ -297,8 +299,14 @@ body {
 }
 
 .direction__details i {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
     color: var(--color-acento-rojo);
-    font-size: 1.1rem;
 }
 
 /* Responsive */
@@ -318,8 +326,184 @@ body {
 }
 /** ============ Direction Section End ============ */
 
+/** ============ The Best Section Start ============ */
+.theBest {
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+    padding: 6rem 3rem;
+    text-align: center;
+    position: relative;
+}
 
-footer {
+.theBest__header h2 {
+    font-size: 2.5rem;
+    color: var(--color-acento-dorado);
+    margin-bottom: 1rem;
+}
+
+.theBest__header p {
+    color: var(--color-texto-secundario);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel__track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel__item {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel__item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(0.8);
+}
+
+.carousel__item h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(215, 38, 56, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.carousel__btn.prev {
+    left: 10px;
+}
+
+.carousel__btn.next {
+    right: 10px;
+}
+
+.carousel__btn.prev:hover, .next:hover {
+    color: var(--color-hover);
+}
+
+@media (max-width: 768px) {
+    .carousel__item img {
+        height: 300px;
+    }
+}
+/** ============ The Best Section Start ============ */
+
+
+/** ============ Footer Start ============ */
+.footer {
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--color-texto-principal);
+    border-top: 1px solid var(--color-borde);
+    background-color: var(--color-fondo-secundario);
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer__content h3 {
+    color: var(--color-acento-dorado);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.footer__links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__links a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: var(--color-texto-secundario);
+}
+
+.footer__links a:hover {
+    color: var(--color-acento-rojo);
+}
+
+.social__icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social__icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: var(--color-texto-principal);
+    border: 1px solid var(--color-texto-principal);
+}
+
+.social__icons a:hover {
+    color: var(--color-acento-dorado);
+    border-color: var(--color-acento-dorado);
+    transform: translateY(-5px);
+}
+
+.footer__info p {
+    color: var(--color-texto-secundario);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer__rights {
+    margin-top: 1rem;
+    color: var(--color-texto-principal);
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .social__icons {
+        flex-wrap: wrap;
+    }
+}
+
+/* footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -342,7 +526,91 @@ footer {
     font-size: 1.2rem;
     color: var(--color-texto-principal);
     border: 1px solid var(--color-texto-principal);
+} */
+/** ============ Footer End ============ */
+
+
+/** ============ Modal Start ============ */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 2000;
 }
+
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal__content {
+    background: var(--color-fondo-secundario);
+    color: var(--color-texto-principal);
+    border-radius: 10px;
+    max-width: 600px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    position: relative;
+    animation: zoomIn 0.3s ease;
+}
+
+.modal__img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.modal__title {
+    color: var(--color-acento-dorado);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.modal__description {
+    color: var(--color-texto-secundario);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.modal__rating {
+    font-size: 1.3rem;
+    color: var(--color-acento-dorado);
+    letter-spacing: 3px;
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: var(--color-texto-principal);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal__close:hover {
+    color: var(--color-acento-rojo);
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+/** ============ Modal Start ============ */
+
 
 
 
