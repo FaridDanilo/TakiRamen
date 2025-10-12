@@ -1,0 +1,58 @@
+/* ============ PÁGINAS INDIVIDUALES DE RAMEN ============ */
+.ramen-detail {
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+    padding-top: 100px;
+}
+
+.ramen__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.ramen__image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--sombra-suave);
+}
+
+.ramen__info h2 {
+    color: var(--color-acento-dorado);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.ramen__info .description {
+    font-size: 1.1rem;
+    color: var(--color-texto-secundario);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.ramen__details h3 {
+    color: var(--color-acento-rojo);
+    margin-top: 1.5rem;
+}
+
+.ramen__details ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    color: var(--color-texto-principal);
+}
+
+@media (max-width: 900px) {
+    .ramen__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .ramen__details ul {
+        list-style: none;
+        padding: 0;
+    }
+}

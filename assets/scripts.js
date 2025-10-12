@@ -61,55 +61,6 @@ track.parentElement.addEventListener('mouseleave', startAutoPlay);
 
 
 //* ============ Modal Menú Start ============
-const modal = document.getElementById('modal');
-const modalImg = modal.querySelector('.modal__img');
-const modalTitle = modal.querySelector('.modal__title');
-const modalDesc = modal.querySelector('.modal__description');
-const modalRating = modal.querySelector('.modal__rating');
-const modalClose = modal.querySelector('.modal__close');
 
-const ramenData = {
-    "Miso Ramen": {
-        description: "Caldo espeso a base de miso, con sabores intensos y un toque dulce.",
-        rating: 4
-    },
-    "Shoyu Ramen": {
-        description: "Ramen con base de salsa de soya, equilibrado y muy tradicional.",
-        rating: 5
-    },
-    "Shio Ramen": {
-        description: "El más ligero de todos, con un caldo transparente y suave.",
-        rating: 3
-    },
-    "Tonkotsu Ramen": {
-        description: "Rico y cremoso caldo de cerdo, típico de Hakata.",
-        rating: 5
-    },
-    "Tantanmen Ramen": {
-        description: "Ramen picante con sésamo y carne de cerdo molida.",
-        rating: 4
-    }
-};
-
-document.querySelectorAll('.card-content').forEach(card => {
-    card.addEventListener('click', () => {
-        const title = card.querySelector('h3').textContent;
-        const imgSrc = card.querySelector('img').src;
-        const ramen = ramenData[title] || { description: "Delicioso ramen japonés.", rating: 4 };
-
-        modalImg.src = imgSrc;
-        modalTitle.textContent = title;
-        modalDesc.textContent = ramen.description;
-        modalRating.innerHTML = '★'.repeat(ramen.rating) + '☆'.repeat(5 - ramen.rating);
-
-        modal.classList.add('active');
-    });
-});
-
-modalClose.addEventListener('click', () => modal.classList.remove('active'));
-
-modal.addEventListener('click', e => {
-    if (e.target === modal) modal.classList.remove('active');
-});
 //* ============ Modal Menú End ============
 

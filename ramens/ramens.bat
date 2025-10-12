@@ -1,0 +1,16 @@
+echo > miso.html
+echo > shoyu.html
+echo > shio.html
+echo > shoyuramen.html
+echo > tonkotsu.html
+echo > tantanmen.html
+echo > taiwan.html
+echo > shio.html
+echo > sapporo.html
+echo > okinawa.html
+echo > menma.html
+echo > kurume.html
+echo > kitakata.html
+echo > kagoshima.html
+echo > hakataramen.html
+echo > champon.html
