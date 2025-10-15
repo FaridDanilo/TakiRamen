@@ -22,10 +22,33 @@ window.addEventListener('scroll', () => {
     }
 
     lastScrollTop = scrollTop;
-})
+});
 
+const navbarToggle = document.getElementById("navbarToggle");
+const navbarLinks = document.getElementById("navbarLinks");
 
+navbarToggle.addEventListener("click", () => {
+    navbarLinks.classList.toggle("show");
+    navbarToggle.classList.toggle("active");
+});
 
+// Cerrar el menú al hacer clic en un enlace
+document.querySelectorAll(".navbar__links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navbarLinks.classList.remove("show");
+        navbarToggle.classList.remove("active");
+    });
+});
+
+// Cambiar icono hamburguesa ↔️ X
+navbarToggle.addEventListener("click", () => {
+    const icon = navbarToggle.querySelector("i");
+    if (navbarToggle.classList.contains("active")) {
+        icon.classList.replace("fa-bars", "fa-xmark");
+    } else {
+        icon.classList.replace("fa-xmark", "fa-bars");
+    }
+});
 
 //* Navbar Functions End
 
