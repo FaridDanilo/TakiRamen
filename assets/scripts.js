@@ -1,3 +1,34 @@
+//* Navbar Functions Start
+const sectionActive = document.querySelectorAll('.navbar__links ul li a');
+
+sectionActive.forEach(menu => {
+    menu.addEventListener('click', () => {
+        sectionActive.forEach(link => link.classList.remove('active'));
+
+        menu.classList.add('active');
+    });
+});
+
+const navbar = document.querySelector('.navbar');
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && scrollTop > 15) {
+        navbar.classList.add('hidden');
+    } else {
+        navbar.classList.remove('hidden');
+    }
+
+    lastScrollTop = scrollTop;
+})
+
+
+
+
+//* Navbar Functions End
+
 //* ============ Section Menú Start ============
 const cardsContent = document.querySelectorAll('.card-content');
 
@@ -58,9 +89,3 @@ startAutoPlay();
 track.parentElement.addEventListener('mouseenter', stopAutoPlay);
 track.parentElement.addEventListener('mouseleave', startAutoPlay);
 //* ============ Carrusel The Best Start ============
-
-
-//* ============ Modal Menú Start ============
-
-//* ============ Modal Menú End ============
-

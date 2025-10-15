@@ -1,58 +1,246 @@
-/* ============ PÁGINAS INDIVIDUALES DE RAMEN ============ */
-.ramen-detail {
-    background-color: var(--color-fondo-principal);
-    color: var(--color-texto-principal);
-    padding-top: 100px;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.ramen__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
+:root {
+    /** Colores base */
+    --color-fondo-principal: #0A0F1C;
+    --color-fondo-secundario: #1C2230;
+
+    /** Colores de acento */
+    --color-acento-rojo: #D72638;
+    --color-acento-dorado: #F0A500;
+
+    /** Colores de texto */
+    --color-texto-principal: #F5F5F5;
+    --color-texto-secundario: #B5B5B5;
+    --color-texto-dorado: #CBB26A;
+
+    /** Sombras y efectos */
+    --sombra-suave: 0 4px 10px rgba(0, 0, 0, 0.4);
+    --sombra-dorada: 0 0 12px rgba(240, 165, 0, 0.4);
+    --sombra-roja: 0 0 12px rgba(215, 38, 56, 0.4);
+
+    --color-borde: #2A2F3A;
+    --color-hover: #FF004C;
 }
 
-.ramen__image img {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+/** ============ Navbar Start ============  */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-radius: 10px;
-    box-shadow: var(--sombra-suave);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    background-color: rgba(10, 15, 28, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.ramen__info h2 {
+.navbar.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar__logo .dot {
+    color: var(--color-acento-rojo);
+}
+
+.navbar__logo img {
+    width: 60px;
+}
+
+.navbar__logo h1 {
+    color: var(--color-texto-principal);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.navbar__links i {
+    rotate: -90deg;
+    margin-right: 10px;
+}
+
+.navbar__links ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2.1rem;
+}
+
+.navbar__links a {
+    font-weight: 500;
+    padding-bottom: 5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: var(--color-texto-principal);
+}
+
+.navbar__links a:hover {
+    color: var(--color-hover);
+}
+
+.navbar__links a.active {
+    color: var(--color-acento-rojo);
+    border-bottom: 2px solid var(--color-acento-rojo);
+}
+
+/** ============ Navbar End ============  */
+
+/** ============ Individual Pages Of Ramens Start ============ */
+/* ============ PÁGINA DE DETALLE INMERSIVA ============ */
+.ramen-detail {
+    background-color: #0A0F1C;
+    color: var(--color-texto-principal);
+    overflow-x: hidden;
+}
+
+/* Fondo decorativo */
+.ramen__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('../assets/img/backgroundmain.jpg') no-repeat center center/cover;
+    opacity: 0.15;
+    z-index: 0;
+    filter: blur(3px);
+}
+
+/* Contenedor principal */
+.ramen__showcase {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    z-index: 1;
+}
+
+/* Imagen destacada */
+.ramen__photo img {
+    width: 420px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    transition: transform 0.5s ease;
+    border: 2px solid var(--color-acento-rojo);
+}
+
+.ramen__photo img:hover {
+    transform: scale(1.05);
+}
+
+/* Texto principal */
+.ramen__details {
+    max-width: 1000px;
+    padding: 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background: rgba(28, 34, 48, 0.9);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.ramen__details h2 {
+    font-size: 3rem;
+    text-align: center;
     color: var(--color-acento-dorado);
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.ramen__info .description {
-    font-size: 1.1rem;
+.ramen__quote {
+    font-style: italic;
     color: var(--color-texto-secundario);
     margin-bottom: 2rem;
-    line-height: 1.6;
+    font-size: 1rem;
 }
 
-.ramen__details h3 {
-    color: var(--color-acento-rojo);
-    margin-top: 1.5rem;
-}
-
-.ramen__details ul {
-    list-style: disc;
-    margin-left: 1.5rem;
+.ramen__description {
+    font-size: 1.2rem;
     color: var(--color-texto-principal);
+    line-height: 1.7;
+    margin-bottom: 3rem;
 }
 
+/* Bloques de detalle */
+.ramen__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 2fr));
+    gap: 2rem;
+}
+
+.ramen__block {
+    width: 100%;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    background: rgba(10, 15, 28, 0.9);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ramen__block:hover {
+    transform: translateY(-8px);
+}
+
+.ramen__block i {
+    margin-right: 12px;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    color: var(--color-acento-dorado);
+}
+
+.ramen__block h3 {
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: var(--color-acento-rojo);
+}
+
+.ramen__block p,
+.ramen__block ul {
+    font-size: 1rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.6;
+    list-style: none;
+    padding: 0;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
-    .ramen__container {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .ramen__photo img {
+        width: 320px;
     }
 
-    .ramen__details ul {
-        list-style: none;
-        padding: 0;
+    .ramen__details {
+        padding: 2rem;
     }
 }
+
+/** ============ Individual Pages Of Ramens End ============ */
