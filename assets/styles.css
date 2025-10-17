@@ -623,6 +623,147 @@ body h2 {
     }
 }
 
+/** ============ Contact Start ============ */
+.contact {
+    height: 100vh;
+    width: 100%;
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(15, 20, 35, 0.97), rgba(5, 10, 20, 0.95));
+}
+
+.contact__container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.contact__info {
+    flex: 1;
+    color: var(--color-texto-principal);
+}
+
+.contact__info h2 {
+    color: var(--color-acento-rojo);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact__info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* FORMULARIO */
+.contact__form {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.form__group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__group label {
+    margin-bottom: 0.5rem;
+    color: var(--color-texto-principal);
+    font-weight: 500;
+}
+
+.form__group input,
+.form__group textarea {
+    border: none;
+    max-width: 544px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: var(--color-texto-principal);
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px var(--color-acento-rojo);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn__send {
+    color: #fff;
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-acento-rojo);
+}
+
+.btn__send:hover {
+    background-color: #d60000;
+    transform: scale(1.05);
+}
+
+.btn-back-responsive {
+    display: flex;
+    opacity: 0;
+    position: fixed;
+    right: 0; bottom: 0;
+    margin: 15px;
+    rotate: -90deg;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 3rem; height: 3rem;
+    background-color: var(--color-acento-rojo);
+}
+
+.btn-back-responsive i {
+    color: var(--color-acento-dorado);
+}
+
+@media (max-width: 900px) {
+    .contact__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact__info, .contact__form {
+        width: 100%;
+    }
+
+    .contact__form {
+        margin-top: 2rem;
+    }
+
+    .navbar__logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact .btn-back-responsive {
+        opacity: 1;
+    }
+}
+/** ============ Contact StaEndrt ============ */
+
+
 
 
 
