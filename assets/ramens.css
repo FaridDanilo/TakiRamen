@@ -251,6 +251,7 @@ body {
 @media (max-width: 900px) {
     .ramen__photo img {
         width: 320px;
+        height: 310px;
     }
 
     .ramen__details {
