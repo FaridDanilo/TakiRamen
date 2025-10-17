@@ -37,6 +37,10 @@ body {
     font-family: "Noto Sans JP", sans-serif;
 }
 
+body h2 {
+    font-size: 3rem;
+}
+
 /** ============ Navbar Start ============  */
 .navbar {
     position: fixed;
@@ -139,6 +143,23 @@ body {
     .navbar__links.show {
         right: 0;
     }
+
+    .navbar__links ul li {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.4s ease;
+}
+
+.navbar__links.show ul li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.navbar__links.show ul li:nth-child(1) { transition-delay: 0.1s; }
+.navbar__links.show ul li:nth-child(2) { transition-delay: 0.2s; }
+.navbar__links.show ul li:nth-child(3) { transition-delay: 0.3s; }
+.navbar__links.show ul li:nth-child(4) { transition-delay: 0.4s; }
+.navbar__links.show ul li:nth-child(5) { transition-delay: 0.5s; }
 }
 /** ============ Navbar End ============  */
 
@@ -173,7 +194,7 @@ body {
 }
 
 .hero__content h2 {
-    font-size: 3.5rem;
+    /* font-size: 3.5rem; */
     margin-bottom: 1rem;
     color: var(--color-texto-dorado);
 }
@@ -214,12 +235,6 @@ body {
     background: var(--color-acento-dorado);
     color: var(--color-fondo-principal);
 }
-
-@media (max-width: 900px) {
-    .hero__content h2 {
-        font-size: 2rem;
-    }
-}
 /** ============ Hero / Front Page End ============ */
 
 
@@ -237,7 +252,7 @@ body {
 }
 
 .menu__header h2 {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
     color: var(--color-acento-dorado);
     margin-bottom: 1rem;
 }
@@ -323,7 +338,7 @@ body {
 }
 
 .direction__content h2 {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
     color: var(--color-acento-dorado);
     margin-bottom: 1rem;
 }
@@ -367,9 +382,9 @@ body {
 }
 
 @media (max-width: 900px) {
-    .direction__content h2 {
+    /* .direction__content h2 {
         font-size: 2rem;
-    }
+    } */
     .direction__content p {
         font-size: 1rem;
     }
@@ -399,7 +414,7 @@ body {
 }
 
 .theBest__header h2 {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
     color: var(--color-acento-dorado);
     margin-bottom: 1rem;
 }
@@ -442,7 +457,6 @@ body {
 .carousel__item img:hover {
     filter: brightness(0.5);
 }
-
 
 .carousel__item h3 {
     position: absolute;
@@ -604,14 +618,10 @@ body {
 /** ============ Footer End ============ */
 
 @media (max-width: 900px) {
-    body h2{
-        color: blue;
+    body h2 {
+        font-size: 1.5rem;
     }
 }
-
-
-
-
 
 
 

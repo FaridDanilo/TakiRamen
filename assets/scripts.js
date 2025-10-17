@@ -40,16 +40,6 @@ document.querySelectorAll(".navbar__links a").forEach(link => {
     });
 });
 
-// Cambiar icono hamburguesa ↔️ X
-navbarToggle.addEventListener("click", () => {
-    const icon = navbarToggle.querySelector("i");
-    if (navbarToggle.classList.contains("active")) {
-        icon.classList.replace("fa-bars", "fa-xmark");
-    } else {
-        icon.classList.replace("fa-xmark", "fa-bars");
-    }
-});
-
 //* Navbar Functions End
 
 //* ============ Section Menú Start ============

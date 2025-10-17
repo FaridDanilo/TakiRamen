@@ -54,6 +54,10 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+.navbar a {
+    text-decoration: none;
+}
+
 .navbar.hidden {
     transform: translateY(-100%);
     opacity: 0;
@@ -110,14 +114,12 @@ body {
 /** ============ Navbar End ============  */
 
 /** ============ Individual Pages Of Ramens Start ============ */
-/* ============ PÁGINA DE DETALLE INMERSIVA ============ */
 .ramen-detail {
     background-color: #0A0F1C;
     color: var(--color-texto-principal);
     overflow-x: hidden;
 }
 
-/* Fondo decorativo */
 .ramen__background {
     position: absolute;
     top: 0;
@@ -130,7 +132,6 @@ body {
     filter: blur(3px);
 }
 
-/* Contenedor principal */
 .ramen__showcase {
     position: relative;
     display: flex;
@@ -140,10 +141,27 @@ body {
     z-index: 1;
 }
 
-/* Imagen destacada */
+.ramen__showcase .btn-back-responsive {
+    display: flex;
+    opacity: 0;
+    position: fixed;
+    right: 0; bottom: 0;
+    margin: 15px;
+    rotate: -90deg;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 3rem; height: 3rem;
+    background-color: var(--color-acento-rojo);
+}
+
+.ramen__showcase .btn-back-responsive i {
+    color: var(--color-acento-dorado);
+}
+
 .ramen__photo img {
     width: 420px;
-    height: auto;
+    height: 410px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 2rem;
@@ -155,7 +173,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Texto principal */
 .ramen__details {
     max-width: 1000px;
     padding: 3rem;
@@ -188,7 +205,6 @@ body {
     margin-bottom: 3rem;
 }
 
-/* Bloques de detalle */
 .ramen__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 2fr));
@@ -232,7 +248,6 @@ body {
     padding: 0;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
     .ramen__photo img {
         width: 320px;
@@ -240,7 +255,24 @@ body {
 
     .ramen__details {
         padding: 2rem;
+        border-radius: 0;
+    }
+
+    .ramen__details h2 {
+        font-size: 2rem;
+    }
+
+    .navbar__logo {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .navbar__links {
+        display: none;
+    }
+    
+    .ramen__showcase .btn-back-responsive {
+        opacity: 1;
     }
 }
-
 /** ============ Individual Pages Of Ramens End ============ */
