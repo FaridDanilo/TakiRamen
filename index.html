@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -14,11 +14,13 @@
     <header class="navbar">
         <div class="navbar__logo">
             <a href="index.html"><img src="assets/img/logo.png" alt="Takiramen Logo"></a>
-            <a href="index.html"><h1>Takiramen<span class="dot">.</span></h1></a>
+            <a href="index.html">
+                <h1>Takiramen<span class="dot">.</span></h1>
+            </a>
         </div>
 
         <div class="navbar__toggle" id="navbarToggle">
-            <i class="fa-solid fa-bars"></i>    
+            <i class="fa-solid fa-bars"></i>
         </div>
 
         <nav class="navbar__links" id="navbarLinks">
@@ -27,7 +29,7 @@
                 <li><a href="#menu"><i class="fa-solid fa-utensils"></i> Menu</a></li>
                 <li><a href="#direction"><i class="fa-solid fa-location-crosshairs"></i> Direction</a></li>
                 <li><a href="#theBest"><i class="fa-solid fa-crown"></i> The best</a></li>
-                <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li>
+                <!-- <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li> -->
             </ul>
         </nav>
     </header>
@@ -35,15 +37,15 @@
 
     <!--* Front Page Start -->
     <section class="hero" id="home">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="assets/video/backgroundVideo.mp4" type="video/mp4">
+        </video>
         <div class="hero__overlay">
-
-            <!-- <div class="hero__sun"></div> -->
 
             <div class="hero__content fade-in-up">
                 <h2>The art of Japanese ramen</h2>
                 <p>Flavors that tell stories. Tradition, passion, and the Takiramen touch.</p>
                 <a href="#menu"><button class="btn-primary">See Menú</button></a>
-                <a href="history.html"><button class="btn-secondary">Our History</button></a>
             </div>
         </div>
     </section>
@@ -141,7 +143,7 @@
                         <p><i class="fa-solid fa-phone"></i> +57 300 123 4567</p>
                     </div>
                 </div>
-                <button class="btn-primary" onclick="window.location.href='location.html'">How to Arrive</button>
+                <a href="https://www.google.com/maps/place/NIPPON+HOBBY+CENTER/@2.944923,-75.297915,15z/data=!4m6!3m5!1s0x8e3b75bd0fe49263:0xa23c4df6de7b6f87!8m2!3d2.9449232!4d-75.2979149!16s%2Fg%2F11rhwql73d?hl=es&entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"><button class="btn-primary">How to Arrive</button></a>
             </div>
         </div>
 
@@ -170,7 +172,8 @@
                     <h3>Shoyu Ramen</h3>
                 </div>
                 <div class="carousel__item">
-                    <a href="ramens/tantanmen.html"><img src="assets/img/ramens/tantanmen.jpg" alt="Tantanmen Ramen"></a>
+                    <a href="ramens/tantanmen.html"><img src="assets/img/ramens/tantanmen.jpg"
+                            alt="Tantanmen Ramen"></a>
                     <h3>Tantanmen Ramen</h3>
                 </div>
             </div>

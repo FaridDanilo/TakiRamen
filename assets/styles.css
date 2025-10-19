@@ -126,8 +126,7 @@ body h2 {
         position: fixed;
         top: 90px;
         right: -100%;
-        width: 100%;
-        height: calc(100vh - 80px);
+        width: 100%; height: calc(100vh - 80px);
         /* backdrop-filter: blur(6px); */
         transition: right 0.4s ease;
         background-color: var(--color-fondo-principal);
@@ -167,12 +166,19 @@ body h2 {
 /** ============ Hero / Front Page Start ============ */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url(img/backgroundmain.jpg) no-repeat center center/cover;
+    /* background: url(img/backgroundmain.jpg) no-repeat center center/cover; */
+}
+
+.background-clip {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero__overlay {
@@ -235,6 +241,18 @@ body h2 {
     background: var(--color-acento-dorado);
     color: var(--color-fondo-principal);
 }
+
+@media (max-width: 900px) {
+    .background-clip {
+        display: none;
+    }
+
+    .hero {
+        height: 100vh;
+        background: url(img/backgroundmain.jpg) no-repeat center center/cover;
+    }
+}
+
 /** ============ Hero / Front Page End ============ */
 
 
@@ -558,8 +576,7 @@ body h2 {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    width: 50px;
-    height: 50px;
+    width: 50px; height: 50px;
     border-radius: 50%;
     transition: all 0.3s ease;
     color: var(--color-texto-principal);
@@ -764,16 +781,7 @@ body h2 {
 /** ============ Contact StaEndrt ============ */
 
 
-
-
-
-
-
-
-
-
-
-/** ----------------- Animations Start ------------------  */
+/** ============ Animations Start ============  */
 .fade-in-up {
     opacity: 0;
     animation: fadeUp 1.2s ease forwards;
@@ -785,11 +793,11 @@ body h2 {
 }
 
 @keyframes appear {
-    from {opacity: 0; scale: 0.5;}
-    to {opacity: 1; scale: 1;}
+    from {opacity: 0; transform: scale(0.5);}
+    to {opacity: 1; transform: scale(1);}
 }
 
 @keyframes translate {
     from {opacity: 0; transform: translateX(-50px);}
 }
-/** ----------------- Animations End ------------------  */
+/** ============ Animations End ============  */

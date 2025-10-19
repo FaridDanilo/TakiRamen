@@ -32,14 +32,12 @@ navbarToggle.addEventListener("click", () => {
     navbarToggle.classList.toggle("active");
 });
 
-// Cerrar el menú al hacer clic en un enlace
 document.querySelectorAll(".navbar__links a").forEach(link => {
     link.addEventListener("click", () => {
         navbarLinks.classList.remove("show");
         navbarToggle.classList.remove("active");
     });
 });
-
 //* Navbar Functions End
 
 //* ============ Section Menú Start ============
