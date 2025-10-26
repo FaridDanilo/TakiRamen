@@ -1,4 +1,4 @@
-//* Navbar Functions Start
+//* Navbar Functions Start 
 const sectionActive = document.querySelectorAll('.navbar__links ul li a');
 
 sectionActive.forEach(menu => {
@@ -40,10 +40,14 @@ document.querySelectorAll(".navbar__links a").forEach(link => {
 });
 //* Navbar Functions End
 
-//* ============ Section Menú Start ============
-const cardsContent = document.querySelectorAll('.card-content');
+window.addEventListener('load', () => {
+    document.getElementById('bg-video').src = 'assets/video/backgroundVideo.mp4';
+});
 
-cardsContent.forEach(card => {
+//* Section Menú Start
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
     const titleH3 = card.querySelector('h3');
 
     card.addEventListener('mouseover', () => {
@@ -57,10 +61,10 @@ cardsContent.forEach(card => {
         titleH3.style.animation = 'none';
     });
 });
-//* ============ Section Menú Start ============
+//* Section Menú Start
 
 
-//* ============ Carrusel The Best Start ============
+//* Carrusel The Best Start
 const track = document.querySelector('.carousel__track');
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.carousel__btn.next');
@@ -99,4 +103,4 @@ startAutoPlay();
 
 track.parentElement.addEventListener('mouseenter', stopAutoPlay);
 track.parentElement.addEventListener('mouseleave', startAutoPlay);
-//* ============ Carrusel The Best Start ============
+//* Carrusel The Best Start
