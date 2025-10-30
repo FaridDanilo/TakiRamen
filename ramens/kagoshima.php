@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kagoshima Ramen | Takiramen</title>
+    <link rel="stylesheet" href="../assets/ramens.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="ramen-detail">
+    <header class="navbar">
+        <div class="navbar__logo">
+            <img src="../assets/img/logo.png" alt="Takiramen Logo">
+            <a href="../index.php"><h1>Takiramen<span class="dot">.</span></h1></a>
+        </div>
+        <nav class="navbar__links">
+            <ul>
+                <li><a href="../index.php#menu"><i class="fa-solid fa-arrow-up-from-bracket"></i> Back to menu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="ramen__showcase">
+
+        <!-- Decorative background -->
+        <div class="ramen__background"></div>
+
+        <!-- Ramen image -->
+        <div class="ramen__photo">
+            <img src="../assets/img/ramens/kagoshima.jpg" alt="Kagoshima Ramen">
+        </div>
+
+        <!-- Ramen content -->
+        <section class="ramen__details">
+            <h2>Kagoshima Ramen</h2>
+            <p class="ramen__quote">「鹿児島ラーメン — A southern ramen with a noble, creamy taste.」</p>
+
+            <p class="ramen__description">
+                Kagoshima Ramen blends influences from northern and southern Japan. Its broth mixes pork and chicken, achieving a creamy but milder flavor than tonkotsu. It is smooth and slightly sweet.
+            </p>
+
+            <div class="ramen__grid">
+                <div class="ramen__block">
+                    <i class="fa-solid fa-bowl-food"></i>
+                    <h3>Ingredients</h3>
+                    <ul>
+                        <li>Pork and chicken broth</li>
+                        <li>Medium noodles</li>
+                        <li>Bamboo shoots, egg and nori seaweed</li>
+                    </ul>
+                </div>
+
+                <div class="ramen__block">
+                    <i class="fa-solid fa-pepper-hot"></i>
+                    <h3>Flavor</h3>
+                    <p>Creamy and balanced.</p>
+                </div>
+
+                <div class="ramen__block">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <h3>Scent</h3>
+                    <p>Subtle, with smoky and light notes.</p>
+                </div>
+
+                <div class="ramen__block">
+                    <i class="fa-solid fa-water"></i>
+                    <h3>Texture</h3>
+                    <p>Light, with medium body and pleasant mouthfeel.</p>
+                </div>
+            </div>
+        </section>
+        <div class="btn-back-responsive"><a href="../index.php#menu"><i class="fa-solid fa-arrow-up-from-bracket"></i></a></div>
+    </main>
+</body>
+
+</html>
