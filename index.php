@@ -1,3 +1,5 @@
+<?php include  'config/config.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="<?= ASSETS_URL; ?>styles.css">
     <title>Takiramen</title>
 </head>
 
@@ -13,8 +15,8 @@
     <!--* Navbar Start -->
     <header class="navbar">
         <div class="navbar__logo">
-            <a href="index.html"><img src="assets/img/logo.png" alt="Takiramen Logo"></a>
-            <a href="index.html">
+            <a href="index.php"><img src="assets/img/logo.png" alt="Takiramen Logo"></a>
+            <a href="index.php">
                 <h1>Takiramen<span class="dot">.</span></h1>
             </a>
         </div>
@@ -29,7 +31,7 @@
                 <li><a href="#menu"><i class="fa-solid fa-utensils"></i> Menu</a></li>
                 <li><a href="#direction"><i class="fa-solid fa-location-crosshairs"></i> Direction</a></li>
                 <li><a href="#theBest"><i class="fa-solid fa-crown"></i> The best</a></li>
-                <!-- <li><a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a></li> -->
+                <!-- <li><a href="contact.php"><i class="fa-solid fa-phone"></i> Contact</a></li> -->
             </ul>
         </nav>
     </header>
@@ -63,66 +65,66 @@
         <div class="card-container">
             <div class="card-content">
                 <div class="card">
-                    <a href="ramens/miso.html"><img src="assets/img/ramens/misoramen.jpg" alt="miso ramen"></a>
+                    <a href="ramens/miso.php"><img src="assets/img/ramens/misoramen.jpg" alt="miso ramen"></a>
                     <h3>miso ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/shoyu.html"><img src="assets/img/ramens/shoyuramen.jpg" alt="shoyu ramen"></a>
+                    <a href="ramens/shoyu.php"><img src="assets/img/ramens/shoyuramen.jpg" alt="shoyu ramen"></a>
                     <h3>shoyu ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/shio.html"><img src="assets/img/ramens/shioramen.jpg" alt="shio ramen"></a>
+                    <a href="ramens/shio.php"><img src="assets/img/ramens/shioramen.jpg" alt="shio ramen"></a>
                     <h3>shio ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/tonkotsu.html"><img src="assets/img/ramens/tonkotsu.jpg" alt="tonkotsu ramen"></a>
+                    <a href="ramens/tonkotsu.php"><img src="assets/img/ramens/tonkotsu.jpg" alt="tonkotsu ramen"></a>
                     <h3>tonkotsu ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/tantanmen.html"><img src="assets/img/ramens/tantanmen.jpg"
+                    <a href="ramens/tantanmen.php"><img src="assets/img/ramens/tantanmen.jpg"
                             alt="tantanmen ramen"></a>
                     <h3>tantanmen ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/taiwan.html"><img src="assets/img/ramens/taiwan.jpg" alt="taiwan ramen"></a>
+                    <a href="ramens/taiwan.php"><img src="assets/img/ramens/taiwan.jpg" alt="taiwan ramen"></a>
                     <h3>taiwan ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/sapporo.html"><img src="assets/img/ramens/sapporo.jpg" alt="sapporo ramen"></a>
+                    <a href="ramens/sapporo.php"><img src="assets/img/ramens/sapporo.jpg" alt="sapporo ramen"></a>
                     <h3>sapporo ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/okinawa.html"><img src="assets/img/ramens/okinawa.jpg" alt="okinawa ramen"></a>
+                    <a href="ramens/okinawa.php"><img src="assets/img/ramens/okinawa.jpg" alt="okinawa ramen"></a>
                     <h3>okinawa ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/kitakata.html"><img src="assets/img/ramens/kitakata.jpg" alt="kitakata ramen"></a>
+                    <a href="ramens/kitakata.php"><img src="assets/img/ramens/kitakata.jpg" alt="kitakata ramen"></a>
                     <h3>kitakata ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/kagoshima.html"><img src="assets/img/ramens/kagoshima.jpg"
+                    <a href="ramens/kagoshima.php"><img src="assets/img/ramens/kagoshima.jpg"
                             alt="kagoshima ramen"></a>
                     <h3>kagoshima ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/menma.html"><img src="assets/img/ramens/menma.jpg" alt="menma ramen"></a>
+                    <a href="ramens/menma.php"><img src="assets/img/ramens/menma.jpg" alt="menma ramen"></a>
                     <h3>menma ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/kurume.html"><img src="assets/img/ramens/kurume.jpg" alt="kurume ramen"></a>
+                    <a href="ramens/kurume.php"><img src="assets/img/ramens/kurume.jpg" alt="kurume ramen"></a>
                     <h3>kurume ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/hakata.html"><img src="assets/img/ramens/hakataramen.jpg"
+                    <a href="ramens/hakata.php"><img src="assets/img/ramens/hakataramen.jpg"
                             alt="hakataramen ramen"></a>
                     <h3>hakataramen ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/champon.html"><img src="assets/img/ramens/champon.jpg" alt="champon ramen"></a>
+                    <a href="ramens/champon.php"><img src="assets/img/ramens/champon.jpg" alt="champon ramen"></a>
                     <h3>champon ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
                 <div class="card">
-                    <a href="ramens/tsukemen.html"><img src="assets/img/ramens/tsukemen.jpg" alt="tsukemen ramen"></a>
+                    <a href="ramens/tsukemen.php"><img src="assets/img/ramens/tsukemen.jpg" alt="tsukemen ramen"></a>
                     <h3>Tsukemen ramen <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                 </div>
             </div>
@@ -149,10 +151,7 @@
                         <p><i class="fa-solid fa-phone"></i> +57 300 123 4567</p>
                     </div>
                 </div>
-                <a
-                    href="https://www.google.com/maps/place/NIPPON+HOBBY+CENTER/@2.944923,-75.297915,15z/data=!4m6!3m5!1s0x8e3b75bd0fe49263:0xa23c4df6de7b6f87!8m2!3d2.9449232!4d-75.2979149!16s%2Fg%2F11rhwql73d?hl=es&entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"><button
-                        class="btn-primary">How to Arrive <i class="fa-solid fa-motorcycle"
-                            target="_blank"></i></button></a>
+                <a href="https://www.google.com/maps/place/NIPPON+HOBBY+CENTER/@2.944923,-75.297915,15z/data=!4m6!3m5!1s0x8e3b75bd0fe49263:0xa23c4df6de7b6f87!8m2!3d2.9449232!4d-75.2979149!16s%2Fg%2F11rhwql73d?hl=es&entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D" target="_blank"><button class="btn-primary">How to Arrive <i class="fa-solid fa-motorcycle"></i></button></a>
             </div>
         </div>
 
@@ -170,20 +169,20 @@
             <div class="carousel">
                 <div class="carousel__track">
                     <div class="carousel__item">
-                        <a href="ramens/tonkotsu.html"><img src="assets/img/ramens/tonkotsu.jpg"
+                        <a href="ramens/tonkotsu.php"><img src="assets/img/ramens/tonkotsu.jpg"
                                 alt="Tonkotsu Ramen"></a>
                         <h3>Tonkotsu Ramen</h3>
                     </div>
                     <div class="carousel__item">
-                        <a href="ramens/miso.html"><img src="assets/img/ramens/misoramen.jpg" alt="Miso Ramen"></a>
+                        <a href="ramens/miso.php"><img src="assets/img/ramens/misoramen.jpg" alt="Miso Ramen"></a>
                         <h3>Miso Ramen</h3>
                     </div>
                     <div class="carousel__item">
-                        <a href="ramens/shoyu.html"><img src="assets/img/ramens/shoyuramen.jpg" alt="Shoyu Ramen"></a>
+                        <a href="ramens/shoyu.php"><img src="assets/img/ramens/shoyuramen.jpg" alt="Shoyu Ramen"></a>
                         <h3>Shoyu Ramen</h3>
                     </div>
                     <div class="carousel__item">
-                        <a href="ramens/tantanmen.html"><img src="assets/img/ramens/tantanmen.jpg"
+                        <a href="ramens/tantanmen.php"><img src="assets/img/ramens/tantanmen.jpg"
                                 alt="Tantanmen Ramen"></a>
                         <h3>Tantanmen Ramen</h3>
                     </div>
@@ -228,6 +227,18 @@
         </div>
     </footer>
     <!--* Footer End -->
+
+    <div class="form-container">
+        <i class="fa-solid fa-user-tie"></i>
+        <h3>Activar Modo Admin</h3>
+        <form action="admin/auth.php" method="POST" class="admin-form">
+            <div class="form-content">
+                <input type="text" name="user" placeholder="Usuario" required>
+                <input type="password" name="pass" placeholder="Contraseña" required>
+                <button class="btn-admin" type="submit">Entrar</button>
+            </div>
+        </form>
+    </div>
 
     <script src="assets/scripts.js"></script>
 </body>
