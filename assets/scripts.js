@@ -104,9 +104,3 @@ startAutoPlay();
 track.parentElement.addEventListener('mouseenter', stopAutoPlay);
 track.parentElement.addEventListener('mouseleave', startAutoPlay);
 //* Carrusel The Best Start
-
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.altKey && e.key === 'a') {
-        document.querySelector('.form-container').classList.toggle('show');
-    }
-});
