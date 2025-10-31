@@ -1,5 +1,5 @@
 <?php session_start();
-include '../inc/db.php';
+include '../inc/';
 
 if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'admin') {
     header('Location: ../index.php');
